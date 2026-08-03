@@ -51,7 +51,7 @@ window.PORTFOLIO_DATA = {
             videoUrl: "",
         },
         {
-            title: "Sistem Manajemen Aset & Risiko — PT Cybera",
+            title: "PT Cybera - Sirasa",
             category: "Website Aplikasi (Enterprise)",
             description: "Berperan sebagai System Analyst dalam merancang sistem manajemen aset, pelaporan insiden, dan mitigasi risiko. Bertanggung jawab menyusun model proses bisnis (BPMN), arsitektur data (Class Diagram), serta spesifikasi logika sistem (Activity Diagram) untuk aktor Admin, User, Auditor, dan Verifikator.",
             image: "assets/images/projects/cybera.png",
