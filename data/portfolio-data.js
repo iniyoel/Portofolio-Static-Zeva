@@ -21,6 +21,17 @@ window.PORTFOLIO_DATA = {
     subheadline: "System Analyst | Quality Assurance",
     bio: "Lulusan Sistem Informasi Universitas Negeri Surabaya yang berfokus pada bidang System Analysis dan Quality Assurance. Berpengalaman dalam menganalisis kebutuhan pengguna, menyusun dokumentasi sistem, serta melakukan pengujian untuk memastikan setiap fitur berjalan sesuai kebutuhan bisnis dan pengguna.",
 
+    // Pas-foto/foto profil yang tampil di Hero (bagian atas website).
+    // Taruh file fotonya (jpg/png, disarankan rasio potret 3:4 atau 4:5,
+    // resolusi minimal 800x1000px, background rapi/formal) di assets/images/profile/
+    // lalu isi nama filenya di sini. Kosongkan ("") jika belum punya foto —
+    // website otomatis akan menampilkan inisial nama sebagai gantinya.
+    photo: "assets/images/profile/zeva.jpeg",
+    photoAlt: "Pas foto Zeva Lorensia",
+
+    // Teks kecil pada badge di pojok foto (opsional, kosongkan "" untuk sembunyikan)
+    photoBadge: "Open to Work",
+
     // File CV yang akan diunduh saat tombol "Download CV" diklik.
     // Taruh file PDF-nya di assets/cv/
     cvPath: "assets/cv/CV ATS ZEVA 2026.pdf",
@@ -107,7 +118,7 @@ window.PORTFOLIO_DATA = {
       documents: [
         {
           title: "LD Indonesia - Sistem Analysis Document ",
-          file: "assets/documents/projectPT CYBERA/LD Indonesia - Sistem Analysis Document.pdf",
+          file: "assets/documents/projectPT CYBERA/System Analysis Document.pdf",
         },
         {
           title: "Testing Dokumen",

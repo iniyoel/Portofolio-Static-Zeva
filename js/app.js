@@ -34,6 +34,10 @@
 
     document.title = `${p.name} — ${p.title}`;
 
+    /* PAS-FOTO / FOTO PROFIL */
+
+    renderHeroPhoto(p);
+
     /* CV */
 
     ["cv-download-desktop", "cv-download-mobile"].forEach((id) => {
@@ -103,6 +107,50 @@
       .join("")
       .slice(0, 2)
       .toUpperCase();
+  }
+
+  function renderHeroPhoto(p) {
+    const img = document.getElementById("hero-photo");
+    const fallback = document.getElementById("hero-photo-fallback");
+    const initialsEl = document.getElementById("hero-photo-initials");
+    const badge = document.querySelector(".hero-visual-badge");
+    const badgeText = document.getElementById("hero-visual-badge-text");
+
+    if (initialsEl) {
+      initialsEl.textContent = initials(p.name) || "?";
+    }
+
+    function showFallback() {
+      if (img) img.classList.remove("is-loaded");
+      if (fallback) fallback.classList.add("is-visible");
+    }
+
+    function showPhoto() {
+      if (img) img.classList.add("is-loaded");
+      if (fallback) fallback.classList.remove("is-visible");
+    }
+
+    if (img && p.photo) {
+      img.alt = p.photoAlt || `Pas foto ${p.name || ""}`.trim();
+
+      img.onload = showPhoto;
+      img.onerror = showFallback;
+
+      img.src = p.photo;
+    } else {
+      showFallback();
+    }
+
+    /* Badge kecil di pojok foto (opsional) */
+
+    if (badge && badgeText) {
+      if (p.photoBadge) {
+        badgeText.textContent = p.photoBadge;
+        badge.style.display = "";
+      } else {
+        badge.style.display = "none";
+      }
+    }
   }
 
   function setText(id, value) {

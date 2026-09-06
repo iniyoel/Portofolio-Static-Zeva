@@ -305,6 +305,15 @@ button {
 
 .hero-visual {
   position: relative;
+  max-width: 22rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .hero-visual {
+    max-width: none;
+    margin: 0;
+  }
 }
 
 .hero-visual-glow {
@@ -320,21 +329,113 @@ button {
   z-index: -1;
 }
 
+.hero-visual-blob {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(2px);
+  opacity: 0.55;
+}
+
+.hero-visual-blob-1 {
+  width: 6.5rem;
+  height: 6.5rem;
+  top: -1.25rem;
+  right: -1.25rem;
+  background: var(--brand-200);
+}
+
+.hero-visual-blob-2 {
+  width: 8rem;
+  height: 8rem;
+  bottom: -1.75rem;
+  left: -1.75rem;
+  background: var(--brand-400);
+  opacity: 0.2;
+}
+
 .hero-visual-frame {
-  aspect-ratio: 4 / 3;
-  border-radius: 2rem;
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 1.75rem;
+  padding: 0.5rem;
   background: linear-gradient(
-    135deg,
-    var(--brand-200),
-    var(--brand-50)
+    155deg,
+    var(--brand-400),
+    var(--brand-200) 45%,
+    #fff
   );
-  overflow: hidden;
   box-shadow: var(--shadow-card);
 }
 
-.hero-visual-frame svg {
+.hero-visual-photo,
+.hero-visual-fallback {
   width: 100%;
   height: 100%;
+  border-radius: 1.35rem;
+  display: block;
+}
+
+.hero-visual-photo {
+  object-fit: cover;
+  object-position: top center;
+  background: #fff;
+  opacity: 0;
+  transform: scale(1.02);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.hero-visual-photo.is-loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-visual-fallback {
+  position: absolute;
+  inset: 0.5rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    155deg,
+    var(--brand-100),
+    #fff 70%
+  );
+  color: var(--brand-600);
+  font-weight: 800;
+  font-size: 4rem;
+  letter-spacing: 0.05em;
+}
+
+.hero-visual-fallback.is-visible {
+  display: flex;
+}
+
+.hero-visual-badge {
+  position: absolute;
+  left: 1.25rem;
+  bottom: -1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  box-shadow: var(--shadow-card);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--slate-800);
+}
+
+.hero-visual-badge-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+  flex-shrink: 0;
 }
 
 /* =========================================================
