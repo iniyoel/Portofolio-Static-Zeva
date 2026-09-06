@@ -106,12 +106,12 @@ window.PORTFOLIO_DATA = {
         "https://www.figma.com/proto/WvyQFMpOkx5BA1ajPbC15p/Project-LD-INDONESIA?node-id=663-2130&t=9UcEUg204uV6SCGb-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=182%3A1629",
       documents: [
         {
-          title: "LD Indonesia - Dokumen Analis ",
-          file: "assets/documents/projectPT CYBERA\PT CYBERA - Dokumen Kebutuhan Sistem dan Perencanaan.pdf",
+          title: "LD Indonesia - Sistem Analysis Document ",
+          file: "assets/documents/projectPT CYBERA/LD Indonesia - Sistem Analysis Document.pdf",
         },
         {
           title: "Testing Dokumen",
-          file: "assets\documents\project\PT CYBERA\PT CYBERA - DOKUMEN ANALISIS.pdf",
+          file: "assets/documents/project/PT CYBERA/Testing LD Indonesia.xlsx",
         },
       ],
       videoUrl: "",
