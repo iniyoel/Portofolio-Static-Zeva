@@ -807,6 +807,16 @@
        PDF VIEWER
     ========================================================= */
 
+  function getFileExtension(path) {
+    if (!path) return "";
+
+    const clean = path.split("?")[0].split("#")[0];
+
+    const match = clean.match(/\.([a-zA-Z0-9]+)$/);
+
+    return match ? match[1].toLowerCase() : "";
+  }
+
   function openPdfViewer(project, documentIndex) {
     if (!modalOverlay || !modalTitle || !modalContent) {
       return;
@@ -824,14 +834,29 @@
 
     modalContent.classList.remove("video-mode");
 
-    /*
-     * PDF ditampilkan langsung
-     * di dalam modal menggunakan iframe.
-     *
-     * Tidak ada target="_blank".
-     */
+    const ext = getFileExtension(doc.file);
 
-    modalContent.innerHTML = `
+    const imageExts = ["png", "jpg", "jpeg", "gif", "webp", "svg"];
+
+    const backButtonHtml = `
+            <button
+                type="button"
+                class="document-back-btn"
+                data-document-back
+            >
+                ← Kembali ke Dokumen
+            </button>
+        `;
+
+    if (ext === "pdf") {
+      /*
+       * PDF ditampilkan langsung
+       * di dalam modal menggunakan iframe.
+       *
+       * Tidak ada target="_blank".
+       */
+
+      modalContent.innerHTML = `
 
             <div class="pdf-viewer-wrapper">
 
@@ -843,16 +868,77 @@
 
             </div>
 
-
-            <button
-                type="button"
-                class="document-back-btn"
-                data-document-back
-            >
-                ← Kembali ke Dokumen
-            </button>
-
+            ${backButtonHtml}
         `;
+    } else if (imageExts.includes(ext)) {
+      /* Dokumen berupa gambar (mis. ERD, PDM) ditampilkan sebagai image preview. */
+
+      modalContent.innerHTML = `
+
+            <div class="pdf-viewer-wrapper document-image-wrapper">
+
+                <img
+                    class="document-image"
+                    src="${escapeAttr(doc.file)}"
+                    alt="${escapeAttr(doc.title || "Dokumen")}"
+                />
+
+            </div>
+
+            ${backButtonHtml}
+        `;
+    } else {
+      /*
+       * File seperti .xlsx / .docx / .pptx tidak bisa
+       * dirender langsung oleh browser di dalam iframe,
+       * jadi ditampilkan sebagai kartu unduh/buka.
+       */
+
+      const extLabel = ext ? ext.toUpperCase() : "FILE";
+
+      modalContent.innerHTML = `
+
+            <div class="pdf-viewer-wrapper document-fallback-wrapper">
+
+                <div class="document-fallback">
+
+                    <span class="document-fallback-icon">${escapeHtml(extLabel)}</span>
+
+                    <p class="document-fallback-title">${escapeHtml(doc.title || "Dokumen")}</p>
+
+                    <p class="document-fallback-desc">
+                        File ${escapeHtml(extLabel)} tidak dapat ditampilkan langsung di browser.
+                        Unduh atau buka filenya melalui tombol di bawah ini.
+                    </p>
+
+                    <div class="document-fallback-actions">
+
+                        <a
+                            href="${escapeAttr(doc.file)}"
+                            class="btn btn-solid"
+                            download
+                        >
+                            Unduh File
+                        </a>
+
+                        <a
+                            href="${escapeAttr(doc.file)}"
+                            class="btn btn-outline"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Buka di Tab Baru
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            ${backButtonHtml}
+        `;
+    }
 
     modalOverlay.classList.add("open");
   }

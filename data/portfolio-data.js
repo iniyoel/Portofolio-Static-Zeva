@@ -26,7 +26,7 @@ window.PORTFOLIO_DATA = {
     // resolusi minimal 800x1000px, background rapi/formal) di assets/images/profile/
     // lalu isi nama filenya di sini. Kosongkan ("") jika belum punya foto —
     // website otomatis akan menampilkan inisial nama sebagai gantinya.
-    photo: "assets/images/zeva.jpeg",
+    photo: "assets/images/profile/zeva.jpeg",
     photoAlt: "Pas foto Zeva Lorensia",
 
     // Teks kecil pada badge di pojok foto (opsional, kosongkan "" untuk sembunyikan)
@@ -117,12 +117,12 @@ window.PORTFOLIO_DATA = {
         "https://www.figma.com/proto/WvyQFMpOkx5BA1ajPbC15p/Project-LD-INDONESIA?node-id=663-2130&t=9UcEUg204uV6SCGb-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=182%3A1629",
       documents: [
         {
-          title: "LD Indonesia - Sistem Analysis Document ",
-          file: "assets/documents/projectPT CYBERA/System Analysis Document.pdf",
+          title: "LD Indonesia - System Analysis Document",
+          file: "assets/documents/project/LD Indonesia/System Analysis Document.pdf",
         },
         {
           title: "Testing Dokumen",
-          file: "assets/documents/project/PT CYBERA/Testing LD Indonesia.xlsx",
+          file: "assets/documents/project/LD Indonesia/Testing LD-2026.xlsx",
         },
       ],
       videoUrl: "",

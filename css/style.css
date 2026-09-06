@@ -305,14 +305,14 @@ button {
 
 .hero-visual {
   position: relative;
-  max-width: 22rem;
+  max-width: 16rem;
   margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .hero-visual {
-    max-width: none;
-    margin: 0;
+    max-width: 19rem;
+    margin: 0 0 0 auto;
   }
 }
 
@@ -405,7 +405,7 @@ button {
   );
   color: var(--brand-600);
   font-weight: 800;
-  font-size: 4rem;
+  font-size: 2.75rem;
   letter-spacing: 0.05em;
 }
 
@@ -1539,7 +1539,7 @@ button {
    PDF VIEWER
 ========================================================= */
 
-.modal-overlay:has(.pdf-viewer) .modal-box {
+.modal-overlay:has(.pdf-viewer-wrapper) .modal-box {
   width: 100%;
 
   max-width: 900px;
@@ -1551,13 +1551,13 @@ button {
   overflow: hidden;
 }
 
-.modal-overlay:has(.pdf-viewer) .modal-header {
+.modal-overlay:has(.pdf-viewer-wrapper) .modal-header {
   min-height: 58px;
 
   padding: 0.9rem 1.1rem;
 }
 
-.modal-overlay:has(.pdf-viewer) .modal-content {
+.modal-overlay:has(.pdf-viewer-wrapper) .modal-content {
   padding: 0.75rem;
 
   background: var(--slate-100);
@@ -1593,6 +1593,90 @@ button {
   border: none;
 
   background: #fff;
+}
+
+/* =========================================================
+   DOCUMENT IMAGE PREVIEW (mis. ERD, PDM)
+========================================================= */
+
+.document-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 0.5rem;
+}
+
+.document-image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 0.4rem;
+  object-fit: contain;
+}
+
+/* =========================================================
+   DOCUMENT FALLBACK (file yang tidak bisa di-embed, mis. xlsx/docx)
+========================================================= */
+
+.document-fallback-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.document-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  padding: 2rem 1.5rem;
+  max-width: 22rem;
+}
+
+.document-fallback-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.9rem;
+  background: var(--brand-50);
+  color: var(--brand-600);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.document-fallback-title {
+  font-weight: 700;
+  color: var(--slate-800);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.document-fallback-desc {
+  color: var(--slate-500);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.document-fallback-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.document-fallback-actions .btn {
+  font-size: 0.82rem;
+  padding: 0.55rem 1.1rem;
 }
 
 /* =========================================================
@@ -1695,7 +1779,7 @@ button {
     font-size: 0.78rem;
   }
 
-  .modal-overlay:has(.pdf-viewer) .modal-box {
+  .modal-overlay:has(.pdf-viewer-wrapper) .modal-box {
     width: 100%;
 
     max-width: 100%;
@@ -1705,17 +1789,17 @@ button {
     border-radius: 12px;
   }
 
-  .modal-overlay:has(.pdf-viewer) .modal-header {
+  .modal-overlay:has(.pdf-viewer-wrapper) .modal-header {
     min-height: 52px;
 
     padding: 0.75rem 0.85rem;
   }
 
-  .modal-overlay:has(.pdf-viewer) .modal-header h3 {
+  .modal-overlay:has(.pdf-viewer-wrapper) .modal-header h3 {
     font-size: 0.9rem;
   }
 
-  .modal-overlay:has(.pdf-viewer) .modal-content {
+  .modal-overlay:has(.pdf-viewer-wrapper) .modal-content {
     padding: 0.5rem;
   }
 
