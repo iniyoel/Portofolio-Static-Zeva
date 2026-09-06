@@ -18,7 +18,7 @@ window.PORTFOLIO_DATA = {
     title: "System Analyst | QA",
     greeting: "Hi, I'm Zeva 👋",
     headline: "Zeva Lorensia",
-    subheadline: "System Analyst | Quality Assurance",
+    subheadline: "System Analyst | Quality Assurance | Data Administration",
     bio: "Lulusan Sistem Informasi Universitas Negeri Surabaya yang berfokus pada bidang System Analysis dan Quality Assurance. Berpengalaman dalam menganalisis kebutuhan pengguna, menyusun dokumentasi sistem, serta melakukan pengujian untuk memastikan setiap fitur berjalan sesuai kebutuhan bisnis dan pengguna.",
 
     // Pas-foto/foto profil yang tampil di Hero (bagian atas website).
