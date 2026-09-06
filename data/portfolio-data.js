@@ -26,7 +26,7 @@ window.PORTFOLIO_DATA = {
     // resolusi minimal 800x1000px, background rapi/formal) di assets/images/profile/
     // lalu isi nama filenya di sini. Kosongkan ("") jika belum punya foto —
     // website otomatis akan menampilkan inisial nama sebagai gantinya.
-    photo: "assets/images/profile/zeva.jpeg",
+    photo: "assets/images/zeva.jpeg",
     photoAlt: "Pas foto Zeva Lorensia",
 
     // Teks kecil pada badge di pojok foto (opsional, kosongkan "" untuk sembunyikan)
