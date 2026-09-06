@@ -15,7 +15,7 @@
 window.PORTFOLIO_DATA = {
   profile: {
     name: "Zeva Lorensia",
-    title: "System Analyst | QA",
+    title: "System Analyst | QA | Data Administration",
     greeting: "Hi, I'm Zeva 👋",
     headline: "Zeva Lorensia",
     subheadline: "System Analyst | Quality Assurance | Data Administration",
