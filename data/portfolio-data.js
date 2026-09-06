@@ -82,6 +82,10 @@ window.PORTFOLIO_DATA = {
           file: "assets/documents/project/PT CYBERA/PT CYBERA - DOKUMEN ANALISIS.pdf",
         },
         {
+          title: "SRS",
+          file: "assets/documents/project/PT CYBERA/SRS -Aplikasi Manajemen Aset dan Risiko.pdf",
+        },
+        {
           title: "ERD",
           file: "assets/documents/project/PT CYBERA/ERD Cybera Finallllllllllyyyyyyyyyy.png",
         },
