@@ -69,7 +69,7 @@ window.PORTFOLIO_DATA = {
       title: "PT Cybera - Sirasa",
       category: "Website Aplikasi (Enterprise)",
       description:
-        "Berperan sebagai System Analyst dalam pengembangan aplikasi SIRASA dengan menganalisis kebutuhan pengguna, memetakan proses bisnis, menentukan fitur dan hak akses, serta menyusun dokumentasi sistem seperti SRS, BPMN, Use Case, ERD, dan diagram UML. Turut melakukan pengecekan kesesuaian desain UI/UX dan hasil implementasi fitur untuk memastikan sistem yang dikembangkan sesuai dengan kebutuhan dan rancangan. Hasilnya berupa dokumentasi analisis dan perancangan sistem sebagai acuan pengembangan aplikasi.",
+        "Berperan sebagai System Analyst dalam pengembangan aplikasi SIRASA dengan menganalisis kebutuhan pengguna, memetakan proses bisnis, menentukan fitur dan hak akses, serta menyusun dokumentasi sistem seperti SRS, BPMN, Use Case, ERD, dan diagram UML. Turut melakukan pengecekan kesesuaian desain UI/UX, pengujian fungsional, validasi fitur, serta verifikasi hasil implementasi untuk memastikan sistem yang dikembangkan sesuai dengan kebutuhan dan rancangan. Hasilnya berupa dokumentasi analisis dan perancangan sistem sebagai acuan pengembangan aplikasi.",
       image: "assets/images/projects/cybera.png",
       figmaLink: "https://fe-sso.vercel.app/dashboard",
       documents: [
@@ -96,7 +96,7 @@ window.PORTFOLIO_DATA = {
       title: "LD Indonesia",
       category: "Website Aplikasi",
       description:
-        "Berperan sebagai System Analyst pada pengembangan platform pembelajaran bahasa Jerman. Bertanggung jawab menggali kebutuhan stakeholder, merancang fitur dan alur sistem, serta membuat prototype UI/UX untuk mendukung proses pengembangan aplikasi.",
+        "Berperan sebagai Asisten System Analyst pada pengembangan platform pembelajaran bahasa Jerman. Bertanggung jawab menggali kebutuhan stakeholder, merancang fitur dan alur sistem, membuat prototype UI/UX, serta menyusun dokumentasi untuk mendukung proses pengembangan aplikasi. Turut melakukan pengujian fungsional dan validasi fitur guna memastikan implementasi sistem sesuai dengan kebutuhan pengguna.",
       image: "assets/images/projects/ld_indonesia.png",
       figmaLink:
         "https://www.figma.com/proto/WvyQFMpOkx5BA1ajPbC15p/Project-LD-INDONESIA?node-id=663-2130&t=9UcEUg204uV6SCGb-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=182%3A1629",
